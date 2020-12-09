@@ -4,7 +4,60 @@
     padding: 0;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     font-family: Raleway, sans-serif;
 }
 
+/*---NAVBAR---*/
+header {
+    width: 90%;
+    padding-top: 30px;
+    margin: auto;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "logo . nav signup";
+    grid-template-columns: auto 1fr auto auto;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+nav {
+    grid-area: nav;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav_anchors {
+    padding: 40px 32px;
+    color: #000;
+    transition-duration: 0.2s;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+}
+
+.nav_anchors:hover {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+
+.header_signup {
+    padding-left: 32px;
+    color: #0065FC;
+    font-weight: bold;
+    grid-area: signup;
+}
