@@ -21,12 +21,21 @@ header {
     font-weight: 500;
     display: grid;
     align-items: center;
-    grid-template-areas: "logo . nav signup";
-    grid-template-columns: auto 1fr auto auto;
+    text-align: center;
 }
 
 header a{
     text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav_anchors {
+    color: #000;
+    transition-duration: 0.2s;
 }
 
 .logo {
@@ -37,27 +46,70 @@ nav {
     grid-area: nav;
 }
 
-ul{
-    list-style-type: none;
-    display: flex;
-}
-
-.nav_anchors {
-    padding: 40px 32px;
-    color: #000;
-    transition-duration: 0.2s;
-    border-top: 3px transparent solid;
-    border-bottom: 3px transparent solid;
-}
-
-.nav_anchors:hover {
-    color: #0065FC;
-    border-top: 3px solid #0065FC;
-}
-
 .header_signup {
-    padding-left: 32px;
     color: #0065FC;
     font-weight: bold;
     grid-area: signup;
+}
+
+/*---NAVBAR RESPONSIVE---*/
+
+@media screen and (min-width: 601px) {
+    header{
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo . nav signup";
+    }
+
+    .nav_anchors{
+        padding: 40px 32px;
+        border-top: 3px transparent solid;
+        border-bottom: 3px transparent solid;
+    }
+
+    .nav_anchors:hover {
+        color: #0065FC;
+        border-top: 3px solid #0065FC;
+    }
+
+    .header_signup{
+        padding-left: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        grid-template-rows: 1fr 100px;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo . signup" "nav nav nav";
+    }
+
+    .nav_anchors {
+        font-size: 1.5rem;
+        border-bottom: 3px solid #F2F2F2;
+    }
+
+    .housing{
+        display: inline-block;
+        padding-bottom: 10px;
+        width: 50vw;
+    }
+
+    .activity{
+        display: inline-block;
+        padding-bottom: 10px;
+        width: 50vw;
+    }
+    .nav_anchors:hover {
+        border-top: transparent;
+        border-bottom-color: #0065FC;
+    }
+
+    .logo{
+        padding-left: 10px;
+    }
+
+    .header_signup{
+        padding-right: 10px;
+    }
 }
