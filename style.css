@@ -65,7 +65,6 @@ nav {
 }
 
 /*---HEADER RESPONSIVE---*/
-
 @media screen and (min-width: 601px) {
     header {
         padding-top: 30px;
@@ -131,27 +130,39 @@ nav {
 }
 
 /*---SECTION SEARCH---*/
-
 main {
     width: 90%;
     margin: auto;
 }
 
+/*-SEARCH-TEXT-*/
+.search_text h1{
+    margin-top: 30px;
+    font-size: 2.2rem;
+}
 
-/*-FORMULAIRE-*/
+.search_text p{
+    margin: 10px 0 20px 0;
+    font-size: 1.6rem;
+}
+
+/*-FORM-*/
 form{
     display: inline-flex;
-    border: solid 1px #F2F2F2;
-    border-radius: 10px;
 }
 
 form > *{
     border: 0;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-family: Raleway, sans-serif;
     font-weight: bold;
     font-size: 1.6rem;
     outline: 0;
+}
+
+input{
+    border-top: solid 1px #F2F2F2;
+    border-bottom: solid 1px #F2F2F2;
 }
 
 #search::placeholder{
@@ -160,9 +171,10 @@ form > *{
 
 label{
     background: #F2F2F2;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
+
 label img{
     width: 20px;
     position: relative;
@@ -170,7 +182,39 @@ label img{
 
 form button{
     background: #0065FC;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
     color: #FFF;
+    cursor: pointer;
+}
+
+form button img{
+    display: none;
+}
+
+/*---RESPONSIVE SECTION SEARCH---*/
+@media screen and (max-width: 600px){
+    .search_text h1{
+        margin-top: 0;
+        font-size: 1.8rem;
+    }
+    .search_text p{
+        font-size: 1.5rem;
+    }
+    form > *{
+    padding: 10px 10px;
+    }
+    form input{
+        padding-right: 30px;
+    }
+    form button span{
+        display: none;
+    }
+    form button img{
+        display: flex;
+        width: 20px;
+    }
+    form button {
+        border-radius: 12px;
+    }
 }
