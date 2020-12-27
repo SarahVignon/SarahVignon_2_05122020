@@ -4,18 +4,17 @@
     padding: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-family: Raleway, sans-serif;
 }
 
-/*---NAVBAR---*/
+/*---HEADER---*/
 header {
     width: 90%;
-    padding-top: 30px;
     margin: auto;
     font-size: 1.6rem;
     font-weight: 500;
@@ -24,18 +23,18 @@ header {
     text-align: center;
 }
 
-header a{
+header a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style-type: none;
     display: flex;
 }
 
 .nav_anchors {
     color: #000;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
 .logo {
@@ -47,20 +46,34 @@ nav {
 }
 
 .header_signup {
+    padding: 5px;
     color: #0065FC;
     font-weight: bold;
     grid-area: signup;
+    transition: 0.3s;
 }
 
-/*---NAVBAR RESPONSIVE---*/
+.header_signup:hover {
+    background-color: #DEEBFF;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.header_signup:active {
+    position: relative;
+    top: 2px;
+}
+
+/*---HEADER RESPONSIVE---*/
 
 @media screen and (min-width: 601px) {
-    header{
+    header {
+        padding-top: 30px;
         grid-template-columns: auto 1fr auto auto;
         grid-template-areas: "logo . nav signup";
     }
 
-    .nav_anchors{
+    .nav_anchors {
         padding: 40px 32px;
         border-top: 3px transparent solid;
         border-bottom: 3px transparent solid;
@@ -71,14 +84,15 @@ nav {
         border-top: 3px solid #0065FC;
     }
 
-    .header_signup{
-        padding-left: 32px;
+    .header_signup {
+        margin-left: 32px;
     }
 }
 
 @media screen and (max-width: 600px) {
     header {
         width: 100%;
+        padding-top: 10px;
         grid-template-rows: 1fr 100px;
         grid-template-columns: auto 1fr auto;
         grid-template-areas: "logo . signup" "nav nav nav";
@@ -89,27 +103,74 @@ nav {
         border-bottom: 3px solid #F2F2F2;
     }
 
-    .housing{
+    .housing {
         display: inline-block;
         padding-bottom: 10px;
         width: 50vw;
     }
 
-    .activity{
+    .activity {
         display: inline-block;
         padding-bottom: 10px;
         width: 50vw;
     }
+
     .nav_anchors:hover {
+        color: #0065FC;
         border-top: transparent;
         border-bottom-color: #0065FC;
     }
 
-    .logo{
-        padding-left: 10px;
+    .logo {
+        margin-left: 10px;
     }
 
-    .header_signup{
-        padding-right: 10px;
+    .header_signup {
+        margin-right: 10px;
     }
+}
+
+/*---SECTION SEARCH---*/
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+
+/*-FORMULAIRE-*/
+form{
+    display: inline-flex;
+    border: solid 1px #F2F2F2;
+    border-radius: 10px;
+}
+
+form > *{
+    border: 0;
+    padding: 10px 15px;
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    outline: 0;
+}
+
+#search::placeholder{
+    color: #000;
+}
+
+label{
+    background: #F2F2F2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+label img{
+    width: 20px;
+    position: relative;
+}
+
+form button{
+    background: #0065FC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #FFF;
 }

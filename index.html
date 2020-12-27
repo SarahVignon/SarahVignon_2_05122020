@@ -12,22 +12,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Reservia</title>
 </head>
+
 <body>
+<header>
+    <img class="logo" src="ressources/logo/Reservia.svg" alt="Logo Reservia">
+    <nav>
+        <ul>
+            <li>
+                <a class="nav_anchors housing" href="#">Hébergements</a>
+            </li>
+            <li>
+                <a class="nav_anchors activity" href="#">Activités</a>
+            </li>
+        </ul>
+    </nav>
+    <a class="header_signup" href="#">S'inscrire</a>
+</header>
 
-    <header>
-        <img class="logo" src="ressources/logo/Reservia.svg" alt="Logo Reservia">
-        <nav>
-            <ul>
-                <li>
-                    <a class="nav_anchors housing" href="#">Hébergements</a>
-                </li>
-                <li>
-                    <a class="nav_anchors activity" href="#">Activités</a>
-                </li>
-            </ul>
-        </nav>
-        <a class="header_signup" href="#">S'inscrire</a>
-    </header>
+<main>
+    <section class="section_search">
+        <div class="search_text">
+            <h1>
+                Trouvez votre hébergement pour des vacances de rêve
+            </h1>
+            <p>
+                En plein centre ville ou en pleine nature
+            </p>
+        </div>
+        <form>
+            <label for="search">
+                <img src="ressources/placeholder.svg" alt="icone pointer">
+            </label>
+            <input type="text" id="search" placeholder="Marseille, France">
+            <button>Rechercher</button>
+        </form>
+    </section>
 
+</main>
 </body>
+
 </html>
