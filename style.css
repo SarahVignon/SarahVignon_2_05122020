@@ -135,13 +135,13 @@ main {
     margin: auto;
 }
 
-/*-SEARCH-TEXT-*/
-.search_text h1{
-    margin-top: 30px;
+/*-SEARCH-TITLE-*/
+.search_title h1{
+    margin-top: 35px;
     font-size: 2.2rem;
 }
 
-.search_text p{
+.search_title p{
     margin: 10px 0 20px 0;
     font-size: 1.6rem;
 }
@@ -175,11 +175,6 @@ label{
     border-bottom-left-radius: 12px;
 }
 
-label img{
-    width: 20px;
-    position: relative;
-}
-
 form button{
     background: #0065FC;
     border-top-right-radius: 12px;
@@ -188,31 +183,77 @@ form button{
     cursor: pointer;
 }
 
-form button img{
+.search_icon{
     display: none;
+}
+
+/*-SEARCH FILTERS-*/
+.search_filters{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.filter_box{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    border-radius: 30px;
+    border: solid 2px #E0E0E0;
+    margin: 0 15px;
+}
+
+.filter_box i{
+    color: #0065FC;
+    padding: 15px 15px;
+    background: #DEEBFF;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.search_filters h2{
+    font-size: 1.7rem;
+}
+
+/*-SEARCH INFO-*/
+.search_info{
+    margin-top: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.search_info i{
+    color: #0065FC;
+    border: solid 2px #E0E0E0;
+    padding: 6px 10px;
+    border-radius: 100%;
+    margin-right: 10px;
 }
 
 /*---RESPONSIVE SECTION SEARCH---*/
 @media screen and (max-width: 600px){
-    .search_text h1{
+    .search_title h1{
         margin-top: 0;
         font-size: 1.8rem;
     }
-    .search_text p{
+    .search_title p{
         font-size: 1.5rem;
     }
     form > *{
     padding: 10px 10px;
     }
     form input{
-        padding-right: 30px;
+        padding-right: 35px;
     }
     form button span{
         display: none;
     }
-    form button img{
+    .search_icon{
         display: flex;
-        width: 20px;
     }
     form button {
         border-radius: 12px;

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+          integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>Reservia</title>
 </head>
 
@@ -31,7 +33,7 @@
 
 <main>
     <section class="section_search">
-        <div class="search_text">
+        <div class="search_title">
             <h1>
                 Trouvez votre hébergement pour des vacances de rêve
             </h1>
@@ -41,14 +43,45 @@
         </div>
         <form>
             <label for="search">
-                <img src="ressources/svg/placeholder.svg" alt="icone pointer">
+                <i class="fas fa-map-marker-alt"></i>
             </label>
             <input type="text" id="search" placeholder="Marseille, France">
             <button>
-                <img src="ressources/svg/magnifying-glass.svg" alt="icone loupe">
+                <span class="search_icon">
+                    <i class="fas fa-search"></i>
+                </span>
                 <span>Rechercher</span>
             </button>
         </form>
+
+        <div class="search_filters">
+            <h2>Filtres</h2>
+            <div class="filter_box">
+                <div><i class="fas fa-money-bill-wave"></i></div>
+                <p>Économique</p>
+            </div>
+            <div class="filter_box">
+                <div><i class="fas fa-child"></i></div>
+                <p>Familial</p>
+            </div>
+            <div class="filter_box">
+                <div><i class="fas fa-heart"></i></div>
+                <p>Romantique</p>
+            </div>
+            <div class="filter_box">
+                <div><i class="fas fa-dog"></i></div>
+                <p>Animaux autorisés</p>
+            </div>
+        </div>
+
+        <div class="search_info">
+            <div>
+                <i class="fas fa-info"></i>
+            </div>
+            <p>
+                Plus de 500 logements sont disponibles dans cette ville
+            </p>
+        </div>
     </section>
 </main>
 </body>
