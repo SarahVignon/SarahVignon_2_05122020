@@ -64,7 +64,7 @@ nav {
     top: 2px;
 }
 
-/*---HEADER RESPONSIVE---*/
+/*---RESPONSIVE HEADER---*/
 @media screen and (min-width: 601px) {
     header {
         padding-top: 30px;
@@ -135,23 +135,23 @@ main {
     margin: auto;
 }
 
-/*-SEARCH-TITLE-*/
-.search_title h1{
+/*-SEARCH TITLE-*/
+.search_title h1 {
     margin-top: 35px;
     font-size: 2.2rem;
 }
 
-.search_title p{
+.search_title p {
     margin: 10px 0 20px 0;
     font-size: 1.6rem;
 }
 
 /*-FORM-*/
-form{
+form {
     display: inline-flex;
 }
 
-form > *{
+form > * {
     border: 0;
     padding: 10px 20px;
     font-family: Raleway, sans-serif;
@@ -160,22 +160,22 @@ form > *{
     outline: 0;
 }
 
-input{
+input {
     border-top: solid 1px #F2F2F2;
     border-bottom: solid 1px #F2F2F2;
 }
 
-#search::placeholder{
+#search::placeholder {
     color: #000;
 }
 
-label{
+label {
     background: #F2F2F2;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
 
-form button{
+form button {
     background: #0065FC;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -183,79 +183,171 @@ form button{
     cursor: pointer;
 }
 
-.search_icon{
+.search_icon {
     display: none;
 }
 
 /*-SEARCH FILTERS-*/
-.search_filters{
+.search_filters {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
-.filter_box{
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
-    border-radius: 30px;
-    border: solid 2px #E0E0E0;
-    margin: 0 15px;
-}
-
-.filter_box i{
-    color: #0065FC;
-    padding: 15px 15px;
-    background: #DEEBFF;
-    border-radius: 100%;
+.search_filters h2 {
+    font-size: 1.7rem;
     margin-right: 10px;
 }
 
-.search_filters h2{
-    font-size: 1.7rem;
+.search_filters > div {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    padding-right: 15px;
+    border: solid 2px #E0E0E0;
+    border-radius: 30px;
+    transition: 0.25s ease-in-out;
+}
+
+.search_filters > div:hover{
+    cursor: pointer;
+    transform: translate(2px, -2px);
+}
+
+.search_filters > div > span {
+    padding: 15px;
+    margin-right: 10px;
+    margin-left: -2px;
+    position: relative;
+}
+
+.search_filters > div > span:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #DEEBFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+
+.search_filters > div:hover span:after{
+    background: #0065FC;
+}
+
+.search_filters > div > span > i {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    color: #0065FC;
+    transition: 0.25s ease-in-out;
+}
+
+.search_filters > div:nth-child(2) > span > i{
+   left:-2px;
+}
+
+.search_filters > div:nth-child(3) > span > i{
+    left:2px;
+}
+
+.search_filters > div:hover i{
+    color: #DEEBFF;
 }
 
 /*-SEARCH INFO-*/
-.search_info{
+.search_info {
     margin-top: 20px;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
 }
 
-.search_info i{
+.search_info > span > i {
     color: #0065FC;
+    font-size: 1.1rem;
     border: solid 2px #E0E0E0;
     padding: 6px 10px;
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 /*---RESPONSIVE SECTION SEARCH---*/
-@media screen and (max-width: 600px){
-    .search_title h1{
+@media screen and (max-width: 600px) {
+    /*RP SEARCH TITLE*/
+    .search_title h1 {
         margin-top: 0;
         font-size: 1.8rem;
     }
-    .search_title p{
+
+    .search_title p {
         font-size: 1.5rem;
     }
-    form > *{
-    padding: 10px 10px;
+    /*RP FORM*/
+    form > * {
+        padding: 10px 10px;
     }
-    form input{
+
+    form input {
         padding-right: 35px;
     }
-    form button span{
+
+    form button span {
         display: none;
     }
-    .search_icon{
+
+    .search_icon {
         display: flex;
     }
+
     form button {
         border-radius: 12px;
     }
 }
+    /*RP SEARCH FILTERS*/
+@media screen and (max-width: 945px){
+    .search_filters {
+        font-size: 1.4rem;
+    }
+
+    .search_filters h2{
+        font-size: 1.6rem;
+    }
+
+    .search_filters > div {
+        margin: 5px 10px 5px 0;
+    }
+
+    .search_filters > div > span:after {
+        width: 48px;
+        height: 48px;
+        top: -1px;
+    }
+}
+
+@media screen and (max-width: 405px){
+    .search_filters h2{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 330px){
+    /*RP FORM*/
+    form input {
+        font-size: 1.4rem;
+        padding-right: 45px;
+    }
+
+    /*RP SEARCH FILTERS*/
+    .search_filters > div:nth-child(3) {
+        margin: 5px 0;
+    }
+}
+
