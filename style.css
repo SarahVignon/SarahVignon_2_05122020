@@ -14,7 +14,7 @@ body {
 
 /*---HEADER---*/
 header {
-    width: 90%;
+    width: 95%;
     margin: auto;
     font-size: 1.6rem;
     font-weight: 500;
@@ -131,7 +131,7 @@ nav {
 
 /*---SECTION SEARCH---*/
 main {
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -189,11 +189,10 @@ form button {
 
 /*-SEARCH FILTERS-*/
 .search_filters {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -203,10 +202,11 @@ form button {
 }
 
 .search_filters > div {
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     margin: 0 15px;
-    padding-right: 15px;
+    padding-right: 20px;
     border: solid 2px #E0E0E0;
     border-radius: 30px;
     transition: 0.25s ease-in-out;
@@ -264,7 +264,7 @@ form button {
 
 /*-SEARCH INFO-*/
 .search_info {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
@@ -313,7 +313,7 @@ form button {
 }
     /*RP SEARCH FILTERS*/
 @media screen and (max-width: 945px){
-    .search_filters {
+    .search_filters > div {
         font-size: 1.4rem;
     }
 
@@ -351,3 +351,124 @@ form button {
     }
 }
 
+/*---SECTION ACCOMMODATIONS---*/
+#accommodations{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-MAIN RESULTS-*/
+.main_results{
+    width: 960px;
+    background: #F2F2F2;
+    border-radius: 15px;
+}
+
+.main_results > h2{
+    font-size: 2rem;
+    margin: 40px 0 0 40px;
+}
+
+.main_results > a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 30px 0 30px 40px;
+    color: #000000;
+}
+
+.main_cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_cards a{
+    text-decoration:none;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.card{
+    width: 270px;
+    height: 200px;
+    margin-top: 30px;
+    background: #FFFFFF;
+    border: solid #FFFFFF 5px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+}
+
+.part_txt *{
+    margin-top: 8px;
+}
+
+.part_txt{
+    margin-left: 8px;
+}
+
+.part_txt i{
+    color: #0065FC;
+}
+
+span > .grey_star{
+    color: #E0E0E0;
+}
+
+/*IMAGES*/
+.part_img{
+    position: relative;
+    height: 60%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.C_1{
+    background: url("ressources/hebergements/photo_modif/marcus-loke-WQJvWU_HZFo-unsplash.jpg") center;
+}
+
+.C_2{
+    background: url("ressources/hebergements/photo_modif/fred-kleber-gTbaxaVLvsg-unsplash.jpg") center;
+}
+
+.C_3{
+    background: url("ressources/hebergements/photo_modif/reisetopia-B8WIgxA_PFU-unsplash.jpg") center;
+}
+
+.C_4{
+    background: url("ressources/hebergements/photo_modif/annie-spratt-Eg1qcIitAuA-unsplash.jpg") center;
+}
+
+.C_5{
+    background: url("ressources/hebergements/photo_modif/nicate-lee-kT-ZyaiwBe0-unsplash.jpg") center;
+}
+
+.C_6{
+    background: url("ressources/hebergements/photo_modif/febrian-zakaria-M6S1WvfW68A-unsplash.jpg") center;
+}
+
+.blue_filter{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: background-color 0.4s ease;
+}
+
+.card:hover .blue_filter{
+    background-color: rgba(222, 235, 255, .7);
+}
+/*END IMAGES*/
+
+
+/*-POPULAR RESULTS-*/
+.popular_results{
+    background: #F2F2F2;
+    border-radius: 15px;
+    width: 450px;
+}
