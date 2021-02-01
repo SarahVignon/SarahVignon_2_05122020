@@ -6,6 +6,7 @@
 
 html {
     font-size: 62.5%;
+    /*scroll-behavior: smooth;*/
 }
 
 body {
@@ -329,6 +330,11 @@ form button {
     border-radius: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     font-size: 1.5rem;
+    transition: 0.25s ease-in-out;
+}
+
+.card:hover {
+    transform: translate(2px, -2px);
 }
 
 #accommodations span > i {
@@ -337,23 +343,6 @@ form button {
 
 #accommodations span > .grey_star {
     color: #E0E0E0;
-}
-
-.part_img {
-    position: relative;
-}
-
-.blue_filter {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition: background-color 0.4s ease;
-}
-
-.card:hover .blue_filter {
-    background-color: rgba(222, 235, 255, .5);
 }
 
 /*-MAIN RESULTS-*/
@@ -565,3 +554,122 @@ form button {
     }
 }
 
+/*---SECTION ACTIVITIES---*/
+#activities {
+    margin-top: 25px;
+}
+
+#activities h2 {
+    font-size: 2rem;
+    margin: 40px 0 0 30px;
+}
+
+.activities_cards {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.activities_cards h3 {
+    padding: 10px;
+}
+
+#activities .card {
+    border: none;
+}
+
+.activities_cards > a {
+    display: block;
+    width: 25%;
+    height: 480px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.activities_cards > a img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.activities_column {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activities_column > a {
+    display: block;
+    height: 230px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.activities_column img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1279px) {
+    .activities_cards h3 {
+        font-size: 1.1rem;
+        padding: 5px 0 5px 10px;
+    }
+
+    .activities_cards > a {
+        width: 50%;
+        height: 270px;
+        margin-bottom: 30px;
+    }
+
+    .activities_column {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+
+    .activities_column > a {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    #activities h2 {
+        margin: 20px 0 20px 20px;
+    }
+
+    .activities_cards {
+        margin-top: 0;
+    }
+
+    .activities_cards h3 {
+        font-size: 1.4rem;
+        padding: 10px 0 10px 10px;
+    }
+
+    .activities_cards > a {
+        width: 100%;
+        height: 220px;
+        margin: 10px 15px;
+    }
+
+    .activities_cards > a img {
+        height: 80%;
+    }
+
+    .activities_column{
+        width: 100%;
+        margin: 0;
+    }
+
+    .activities_column > a{
+        margin: 10px 15px;
+        height: 220px;
+    }
+}
