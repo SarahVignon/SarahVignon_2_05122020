@@ -6,7 +6,7 @@
 
 html {
     font-size: 62.5%;
-    /*scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
 }
 
 body {
@@ -617,6 +617,7 @@ form button {
     object-fit: cover;
 }
 
+/*---RESPONSIVE SECTION ACTIVITIES---*/
 @media screen and (max-width: 1279px) {
     .activities_cards h3 {
         font-size: 1.1rem;
@@ -663,13 +664,60 @@ form button {
         height: 80%;
     }
 
-    .activities_column{
+    .activities_column {
         width: 100%;
         margin: 0;
     }
 
-    .activities_column > a{
+    .activities_column > a {
         margin: 10px 15px;
         height: 220px;
+    }
+}
+
+/*---FOOTER---*/
+footer {
+    width: 100%;
+    margin: 40px auto 0;
+    max-width: 1535px;
+    background-color: #F2F2F2;
+    font-size: 1.4rem;
+}
+
+.footer_box {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_box div {
+    line-height: 3rem;
+    margin-right: 280px;
+}
+
+.footer_box p {
+    transition: 0.3s;
+}
+
+.footer_box p:hover {
+    cursor: pointer;
+    color: #0065FC;
+}
+
+.footer_box div:nth-child(3) {
+    margin-right: 0;
+}
+
+/*---RESPONSIVE FOOTER---*/
+@media screen and (max-width: 1279px) {
+    footer {
+        margin: 20px auto 0;
+        font-size: 1.2rem;
+    }
+
+    .footer_box div {
+        margin: 15px 100px 0 0;
     }
 }
